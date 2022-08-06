@@ -57,11 +57,7 @@ export default function App() {
     <>
     <StatusBar style="light" />
     <View style={styles.appContainer}>
-      {modalIsVisable && (
-        <TaskInput onCancel={endAddTaskHandler} visable={modalIsVisable} onAddTask={addTaskHandler} />
-      )}
-      <Button title="Add Task" onPress={startAddTaskHandler} color="#a065ec"/>
-      <DeleteAllTasks onDeleteAll={deleteAllTask} />
+
       <View style={styles.taskContainer}>
         <FlatList
           data={courseGoal}
@@ -78,6 +74,11 @@ export default function App() {
             return item.id;
           }}
         />
+      {modalIsVisable && (
+        <TaskInput onCancel={endAddTaskHandler} visable={modalIsVisable} onAddTask={addTaskHandler} />
+      )}
+      <Button title="Add Task" onPress={startAddTaskHandler} color="#a065ec"/>
+      <DeleteAllTasks onDeleteAll={deleteAllTask} />
       </View>
     </View>
     </>
@@ -92,7 +93,5 @@ const styles = StyleSheet.create({
   taskContainer: {
     flex: 5,
     marginTop: 20,
-    borderTopWidth: 1,
-    borderTopColor: "#cccccc",
   },
 });

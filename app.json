@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1e085a"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,11 +22,12 @@
       "supportsTablet": true
     },
     "android": {
+    "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#1e085a"
       },
-      "package": "host.exp.exponent"
+      "package": "com.RNCourse.RNCourse"
     },
     "web": {
       "favicon": "./assets/favicon.png"
